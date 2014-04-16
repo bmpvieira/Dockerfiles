@@ -1,4 +1,4 @@
-# R
+# r-lang
 # Ubuntu with R. You can connect with ssh and also run GUI apps (see bmpvieira/ssh).
 #
 # VERSION               0.0.1

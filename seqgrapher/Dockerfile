@@ -4,7 +4,7 @@
 #
 # VERSION 0.0.1
 
-FROM bmpvieira/r
+FROM bmpvieira/r-lang
 MAINTAINER Bruno Vieira <mail@bmpvieira.com>
 
 # Set noninteractive installs
