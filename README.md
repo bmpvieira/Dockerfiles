@@ -76,3 +76,7 @@ See the [boot2docker repo](https://github.com/boot2docker/boot2docker/blob/maste
 License
 -------
 [MIT](https://raw.github.com/bmpvieira/Dockerfiles/master/LICENSE)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bmpvieira/dockerfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
