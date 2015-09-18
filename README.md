@@ -16,6 +16,24 @@ docker rm (docker ps -a -q)
 # Remove all images
 docker rmi (docker images -a -q)
 ```
+
+Run containers without Docker
+-----------------------------
+Docker has great features, however in most HPC it cannot be used due to [security issues](https://docs.docker.com/articles/security/).
+However, the OS can be extracted from a container and run with chroot or in a VM.
+Example:
+```bash
+docker ps -a 
+# CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS                           PORTS               NAMES
+# d555fe341045        busybox                  "/bin/sh"           About an hour ago   Exited (139) About an hour ago                       elegant_poitras
+docker export elegant_poitras > elegant_poitras.tar
+tar xf elegant_poitras.tar
+npm install -g mini-container
+sudo mini-container bin/sh
+```
+
+# Some of the info below might be deprecated with new boot2docker
+
 Docker on OSX
 -------------
 Since OSX isn't Linux and Docker is based on Linux Containers (LXC), the closest
@@ -43,13 +61,11 @@ boot2docker up
 boot2docker ssh "sudo modprobe vboxsf && mkdir -p $HOME && sudo mount -t vboxsf home $HOME"
 ```
 
-
 ### Workarounds ###
 
 The following are temporary workaround to get shared folders between the host
 and the Docker container working, and port forwarding (for example for web apps or ssh).  
 See the [boot2docker repo](https://github.com/boot2docker/boot2docker/blob/master/doc/WORKAROUNDS.md) for more info.
-
 
 #### Shared folders ####
 
